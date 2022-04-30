@@ -11,16 +11,34 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Login'),),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
-              color: Colors.blue.shade900,
               child: const Icon(Icons.lock, size: 100,),
-              height: 200,
+              height: 250,
               alignment: const Alignment(0, 0),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [
+                    Theme.of(context).primaryColorDark,
+                    Theme.of(context).primaryColorLight,
+                  ]
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    offset: Offset(2, 3),
+                    blurRadius: 4,
+                  ),
+                ],
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(150),
+                ),
+              ),
+              margin: const EdgeInsets.only(bottom: 24),
             ),
 
             Text('Login App', style: Theme.of(context).textTheme.headline1,),

@@ -38,6 +38,14 @@ ThemeData criarTemaApp() {
     ),
   );
 
+  final botaoQuadradoTema = ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      primary: primaryColorDark,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      textStyle: const TextStyle(fontSize: 20, color: Colors.white),
+    ),
+  );
+
   return ThemeData(
     primaryColor: primaryColor,
     primaryColorDark: primaryColorDark,
@@ -45,6 +53,7 @@ ThemeData criarTemaApp() {
     appBarTheme: appBarTema,
     inputDecorationTheme: inputTema,
     textTheme: textoTema,
-    scaffoldBackgroundColor: Colors.white
+    elevatedButtonTheme: botaoQuadradoTema,
+    scaffoldBackgroundColor: Colors.white,
   );
 }
